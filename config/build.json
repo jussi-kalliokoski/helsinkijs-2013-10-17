@@ -1,0 +1,54 @@
+{
+    "jshintrc": ".jshintrc",
+    "csslintrc": ".csslintrc",
+    "gruntfile": "Gruntfile.coffee",
+    "tempDir": "dist/temp",
+    "stylesheets": [
+      "app/stylus/_reset.styl",
+      "app/stylus/app.styl"
+    ],
+    "javascripts": [
+      "app/js/app.js",
+      "app/js/config/routes.js",
+      "app/js/controllers/slide-controller.js",
+      "app/js/directives/slide-switcher.js",
+      "app/js/directives/gist.js"
+    ],
+    "vendorJavascripts": [
+      "app/vendor/lodash.js",
+      "app/vendor/angular.js"
+    ],
+    "karmaDefaults": {
+      "basePath": "../../",
+      "captureTimeout": 60000,
+      "singleRun": true,
+      "autoWatch": false,
+      "files": [
+        "tests/vendor/function-bind.js",
+        "tests/vendor/chai.js",
+        "tests/vendor/sinon-1.7.3.js",
+        "tests/vendor/sinon-chai.js",
+        "tests/vendor/init.js"
+      ],
+      "reporters": [
+        "progress"
+      ],
+      "coverageReporter": {
+        "type": "html",
+        "dir": "dist/coverage/"
+      },
+      "exclude": [
+      ],
+      "browsers": [
+        "PhantomJS"
+      ],
+      "frameworks": [
+        "mocha"
+      ],
+      "plugins": [
+        "karma-mocha",
+        "karma-phantomjs-launcher",
+        "karma-coverage"
+      ]
+    }
+}
